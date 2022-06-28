@@ -22,6 +22,10 @@ npm i
           
 ## Deployment
 https://elukac-texteditor.herokuapp.com/
+
+![text editor](https://user-images.githubusercontent.com/91104984/176083353-cc7c110e-d295-4239-a265-eae7a80952e2.png)
+![installed virus](https://user-images.githubusercontent.com/91104984/176083361-2561589a-27d5-4ca2-8dfe-89ecc3a2491b.png)
+
           
 ## License
 N/A.
