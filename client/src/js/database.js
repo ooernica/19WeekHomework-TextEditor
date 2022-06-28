@@ -30,9 +30,10 @@ export const getDb = async () => {
   const text = db.transaction('jate', 'readonly');
   const save = text.objectStore('jate');
   const access = save.getAll();
+  
   const info = await access;
   console.log('Virus saved to database', info.value);
   return info?.value;
-};
+}
 
 initdb();

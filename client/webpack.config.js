@@ -26,7 +26,7 @@ module.exports = () => {
       new WebpackPwaManifest({
         name: 'My Web App',
         short_name: 'MyPWA',
-        description: 'This is a web app I made against my will',
+        description: 'I made this web app against my will',
         background_color: '#ffffff',
         crossorigin: 'use-credentials',
         icons: [
