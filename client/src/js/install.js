@@ -1,4 +1,5 @@
 const { text } = require("express");
+const textHeader = document.getElementById('textHeader');
 
 const butInstall = document.getElementById('buttonInstall');
 
