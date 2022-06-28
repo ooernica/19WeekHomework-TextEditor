@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Webpack Plugin'
+        title: 'Webpack Plugin',
       }),
 
       new WebpackPwaManifest({
@@ -33,10 +33,11 @@ module.exports = () => {
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('assests', 'icons'),
+            destination: path.join('assets', 'icons'),
           }
         ]
       }),
+
 
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -47,6 +48,7 @@ module.exports = () => {
     module: {
       rules: [
         {
+          test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
         {
