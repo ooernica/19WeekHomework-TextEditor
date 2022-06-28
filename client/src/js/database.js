@@ -24,6 +24,15 @@ export const putDb = async (content) => {
 };
 
 // TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => console.error('getDb not implemented');
+export const getDb = async () => {
+  console.error('getDb not implemented');
+  const db = await openDB('jate', 1);
+  const text = db.transaction('jate', 'readonly');
+  const save = text.objectStore('jate');
+  const access = save.getAll();
+  const info = await access;
+  console.log('Virus saved to database', info.value);
+  return info?.value;
+};
 
 initdb();
