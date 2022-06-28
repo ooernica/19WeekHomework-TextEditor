@@ -1,9 +1,13 @@
 {
   "name": "JATE",
   "scripts": {
+    "start:dev": "concurrently \" cd client && npm run build\" \"cd server && npm run server\"",
     "dev": "webpack-dev-server",
-    "build": "webpack --mode production",
-    "start": "webpack --watch"
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server node server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm i && cd ../server && npm i",
+    "client": "cd client && npm start"
   },
   "author": "2U",
   "license": "UNLICENSED",
@@ -21,7 +25,9 @@
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.0.0",
     "webpack-pwa-manifest": "^4.3.0",
-    "workbox-webpack-plugin": "^6.2.4"
+    "workbox-webpack-plugin": "^6.2.4",
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
   },
   "dependencies": {
     "code-mirror-themes": "^1.0.0",
